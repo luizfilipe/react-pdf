@@ -21,7 +21,7 @@
     "@babel/runtime": "^7.20.13",
     "@react-pdf/fns": "2.0.1",
     "@react-pdf/image": "^2.2.1",
-    "@react-pdf/pdfkit": "^3.0.2",
+    "@react-pdf/pdfkit": "https://github.com/luizfilipe/react-pdf#@react-pdf/pdfkit@3.0.3",
     "@react-pdf/primitives": "^3.0.0",
     "@react-pdf/stylesheet": "^4.1.7",
     "@react-pdf/textkit": "^4.2.0",
