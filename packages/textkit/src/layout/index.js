@@ -1,4 +1,4 @@
-import { compose } from '@react-pdf/fns';
+import { compose } from '../../../fns/src';
 
 import wrapWords from './wrapWords';
 import typesetter from './typesetter';

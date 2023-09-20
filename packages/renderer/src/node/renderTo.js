@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { Buffer } from 'buffer';
 
-import { pdf } from '../index';
+import { pdf } from '../';
 
 export const renderToStream = async element => {
   const instance = pdf(element);

@@ -1,4 +1,4 @@
-import * as P from '@react-pdf/primitives';
+import * as P from '../../../primitives/src';
 
 import { embedEmojis } from './emoji';
 import ignoreChars from './ignoreChars';

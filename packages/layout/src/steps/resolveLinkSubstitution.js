@@ -1,5 +1,5 @@
-import * as P from '@react-pdf/primitives';
-import { compose } from '@react-pdf/fns';
+import * as P from '../../../primitives/src';
+import { compose } from '../../../fns/src';
 
 const isType = type => node => node.type === type;
 

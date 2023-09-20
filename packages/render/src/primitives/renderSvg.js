@@ -1,5 +1,5 @@
-import * as P from '@react-pdf/primitives';
-import { isNil } from '@react-pdf/fns';
+import * as P from '../../../primitives/src';
+import { isNil } from '../../../fns/src';
 
 import renderPath from './renderPath';
 import renderRect from './renderRect';

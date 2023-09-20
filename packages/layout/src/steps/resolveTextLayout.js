@@ -1,4 +1,4 @@
-import * as P from '@react-pdf/primitives';
+import * as P from '../../../primitives/src';
 
 import layoutText from '../text/layoutText';
 

@@ -1,4 +1,4 @@
-import { last } from '@react-pdf/fns';
+import { last } from '../../../fns/src';
 
 import trim from '../attributedString/trim';
 import append from '../attributedString/append';

@@ -1,4 +1,4 @@
-import Yoga from '@react-pdf/yoga';
+import Yoga from '../../../yoga';
 
 const getAspectRatio = viewbox => {
   if (!viewbox) return null;

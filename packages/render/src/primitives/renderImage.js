@@ -1,4 +1,4 @@
-import { isNil } from '@react-pdf/fns';
+import { isNil } from '../../../fns/src';
 
 import clipNode from '../operations/clipNode';
 import resolveObjectFit from '../utils/resolveObjectFit';

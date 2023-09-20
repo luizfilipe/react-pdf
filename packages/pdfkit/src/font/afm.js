@@ -1,5 +1,5 @@
-import fs from 'fs';
-import range from '../utils/range';
+import fs from 'node:fs';
+import range from '../utils/range.js';
 
 const WIN_ANSI_MAP = {
   402: 131,

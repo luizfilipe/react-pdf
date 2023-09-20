@@ -1,18 +1,18 @@
-import fs from 'fs';
-import { basename, extname } from 'path';
-import { parse } from '../afm';
+import fs from 'node:fs';
+import { basename, extname } from 'node:path';
+import { parse } from '../afm.js';
 
 const generateJsonFiles = () => {
-  const files = fs.readdirSync(__dirname);
+  const files = fs.readdirSync(new URL('.', import.meta.url).pathname);
   const afmFiles = files.filter(file => file.match(/.afm$/));
 
   afmFiles.forEach(file => {
     const fontName = basename(file).replace(extname(file), '');
-    const data = fs.readFileSync(__dirname + '/' + file, 'utf8');
+    const data = fs.readFileSync(new URL('.', import.meta.url).pathname + '/' + file, 'utf8');
     const parsed = parse(data);
 
     fs.writeFileSync(
-      __dirname + '/' + fontName + '.json',
+      new URL('.', import.meta.url).pathname + '/' + fontName + '.json',
       JSON.stringify(parsed)
     );
   });
@@ -22,7 +22,7 @@ const generateJsonFiles = () => {
 const COMPRESS_ORDER = ['Helvetica', 'Times', 'Courier'];
 
 const readJson = file => {
-  const data = fs.readFileSync(__dirname + '/' + file, 'utf8');
+  const data = fs.readFileSync(new URL('.', import.meta.url).pathname + '/' + file, 'utf8');
   return JSON.parse(data);
 };
 
@@ -48,7 +48,7 @@ const compressJsonFiles = () => {
   const glyphWidths = {};
   const kernPairs = {};
 
-  const files = fs.readdirSync(__dirname);
+  const files = fs.readdirSync(new URL('.', import.meta.url).pathname);
   const jsonFiles = files.filter(file => file.match(/.json$/));
   const filesContent = jsonFiles.map(readJson);
   const sortedFiles = filesContent.sort(sortFiles);
@@ -78,7 +78,7 @@ const compressJsonFiles = () => {
 
   const parsed = { attributes, glyphWidths, kernPairs };
 
-  fs.writeFileSync(__dirname + '/index.json', JSON.stringify(parsed));
+  fs.writeFileSync(new URL('.', import.meta.url).pathname + '/index.json', JSON.stringify(parsed));
 };
 
 generateJsonFiles();

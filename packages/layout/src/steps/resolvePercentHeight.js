@@ -1,4 +1,4 @@
-import { isNil, matchPercent } from '@react-pdf/fns';
+import { isNil, matchPercent } from '../../../fns/src';
 
 /**
  * Transform percent height into fixed

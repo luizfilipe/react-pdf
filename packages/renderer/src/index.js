@@ -1,10 +1,9 @@
-import FontStore from '@react-pdf/font';
-import renderPDF from '@react-pdf/render';
-import PDFDocument from '@react-pdf/pdfkit';
-import layoutDocument from '@react-pdf/layout';
+import FontStore from '../../font/src';
+import renderPDF from '../../render/src';
+import PDFDocument from '../../pdfkit/src';
+import layoutDocument from '../../layout/src';
 
 import createRenderer from './renderer';
-import { version } from '../package.json';
 
 const fontStore = new FontStore();
 
@@ -148,4 +147,4 @@ const StyleSheet = {
   create: s => s,
 };
 
-export { version, Font, StyleSheet, pdf, createRenderer };
+export { Font, StyleSheet, pdf, createRenderer };
